@@ -1,11 +1,11 @@
 import { render } from '@testing-library/angular';
-import { PureTaskListComponent } from './pure-task-list.component';
+import { TaskListComponent } from './task-list.component';
 import { TaskComponent } from './task.component';
-import { withPinnedTasksData } from './pure-task-list.stories';
-describe('PureTaskList component', () => {
+import { withPinnedTasksData } from './task-list.stories';
+describe('TaskList component', () => {
   it('renders pinned tasks at the start of the list', async () => {
     const mockedActions = jest.fn();
-    const tree = await render(PureTaskListComponent, {
+    const tree = await render(TaskListComponent, {
       declarations: [TaskComponent],
       componentProperties: {
         tasks: withPinnedTasksData,
