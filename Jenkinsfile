@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
+        tool 'node.js'
         sh 'npm --version'
       }
     }
