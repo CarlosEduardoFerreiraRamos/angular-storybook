@@ -1,7 +1,7 @@
 pipeline {
   agent {
     node {
-      label 'node build'
+      label 'linux && 64bit'
     }
 
   }
@@ -9,12 +9,6 @@ pipeline {
     stage('build') {
       steps {
         sh 'npm --version'
-      }
-    }
-
-    stage('') {
-      steps {
-        timeout(time: 10, unit: 'SECONDS', activity: true)
       }
     }
 
