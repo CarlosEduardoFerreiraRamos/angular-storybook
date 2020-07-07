@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        node(label: 'node') {
-          sh 'node --version'
+        node(label: 'fire-base') {
+          sh 'fire-base --version'
         }
 
         sh 'npm --version'
